@@ -12,10 +12,6 @@
 
     <style>
 
-      html {
-
-      }
-
       .header {
         text-align: center;
         background-color: #111111;
@@ -66,7 +62,7 @@
         min-width: 50%;
         font-size: 18px;
       }
-        
+
       .nav h1 {
         padding: 16px;
       }
@@ -80,19 +76,62 @@
         display: block;
         margin: auto;
       }
-        
+
       .game {
         padding-top: 50px;
-        background-color: black;          
+        background-color: black;
         color: #FFFFFF;
         text-align: center;
       }
-        
+
       .game h1 {
-        color: #f00;      
-        text-shadow: 0px 0px 25px rgba(255, 255, 255, 1);  
+        color: #f00;
+        text-shadow: 0px 0px 25px rgba(255, 255, 255, 1);
       }
-        
+
+      .info {
+        color: #FFFFFF;
+
+        background: linear-gradient(0deg, #ad170a, #1b0b09);
+        background-size: 400% 400%;
+
+        -webkit-animation: AnimationName 26s ease infinite;
+        -moz-animation: AnimationName 26s ease infinite;
+        animation: AnimationName 26s ease infinite;
+
+        @-webkit-keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:51% 100%}
+            100%{background-position:50% 0%}
+        }
+        @-moz-keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:51% 100%}
+            100%{background-position:50% 0%}
+        }
+        @keyframes AnimationName {
+            0%{background-position:50% 0%}
+            50%{background-position:51% 100%}
+            100%{background-position:50% 0%}
+        }
+      }
+
+      .info h1, img {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      .info .extra-space {
+        padding-top: 40px;
+        text-align: center;
+      }
+
+      .info .btn {
+        padding: 20px;
+        font-size: 18px;
+      }
 
     </style>
 
@@ -111,7 +150,7 @@
     <div class="container-fluid nav">
       <h1>All for one, and one for all.</h1>
       <div class="col-md-4">
-        <a class="btn btn-danger nav-btn" href="https://robertsspaceindustries.com/orgs/MUSKETEERS">Enlist</a>
+        <a class="btn btn-danger nav-btn" target="_blank" href="https://robertsspaceindustries.com/orgs/MUSKETEERS">Enlist</a>
       </div>
       <div class="col-md-4">
         <a class="btn btn-danger nav-btn" href="#game">Play Kingship Strike</a>
@@ -127,28 +166,50 @@
       <h1>Kingship Strike</h1>
       <canvas width="400" height="400"></canvas>
     </div>
-    <div id="musketeers" class="container-fluid">
+    <div id="musketeers" class="container-fluid info">
       <h1>About The Musketeers</h1>
       <div class="col-md-4">
         <h3>History</h3>
-        <p>The Musketeers of the Guard were a military branch under the French Monarchies royal household, known as the Maison du Roi. They were tasked with defending the king outside of his residence, and were armed with muskets.</p>  
-        <p>The Musketeers however faced a rough history. Repeatedly disbanded and formed by the kings of the time, up until 1816 when the company was permanently shutdown.</p>  
-        <p>After several centuries, descendants of the Musketeers decided to study their ancestors practices and regroup with a new mission.</p>  
-      </div>    
+        <p>The Musketeers of the Guard were a military branch under the French Monarchies royal household, known as the Maison du Roi. They were tasked with defending the king outside of his residence, and were armed with muskets.</p>
+        <p>The Musketeers however faced a rough history. Repeatedly disbanded and formed by the kings of the time, up until 1816 when the company was permanently shutdown.</p>
+        <p>After several centuries, descendants of the Musketeers decided to study their ancestors practices and regroup with a new mission.</p>
+      </div>
       <div class="col-md-4">
         <h3>Manifesto</h3>
-        <p>The Musketeers after reflecting there history decided, we are not here to defend any king. Rather, we are here to hunt the kings of the universe.</p>  
+        <p>The Musketeers after reflecting there history decided, we are not here to defend any king. Rather, we are here to hunt the kings of the universe.</p>
         <p>We methodically locate and track the capital ships of the people who treat the universe as their chessboard, and before they even have a chance to ignite their engines, we take them down.</p>
         <p>We’re not in this for profit or rank, the Musketeers fight this battle for it’s purpose.</p>
-      </div>  
+      </div>
       <div class="col-md-4">
         <h3>Creed</h3>
-        <p>Our creed is not an extensive list of rules, it merely represents our core value.</p>   
+        <p>Our creed is not an extensive list of rules, it merely represents our core value.</p>
         <p>All for one, and one for all.</p>
-        <p>We are not just an organization, we are a brotherhood. We do not concern ourselves with rank, but we pride ourselves on having respect for one another.</p>  
-      </div>          
-      <img src="https://robertsspaceindustries.com/media/qkkiik8p52j5cr/logo/MUSKETEERS-Logo.png">    
-    </div>  
+        <p>We are not just an organization, we are a brotherhood. We do not concern ourselves with rank, but we pride ourselves on having respect for one another.</p>
+      </div>
+      <div class="col-md-12">
+        <img src="https://robertsspaceindustries.com/media/qkkiik8p52j5cr/logo/MUSKETEERS-Logo.png">
+      </div>
+      <div id="about" class="container-fluid about">
+        <div class="col-md-6">
+          <h3>What is Star Citizen?</h3>
+          <p>From the mind of Chris Roberts, acclaimed creator of Wing Commander and Freelancer, comes STAR CITIZEN. 100% crowd funded, Star Citizen aims to create a living, breathing science fiction universe with unparalleled immersion… and you’re invited to follow every step of development!</p>
+          <p>More than a space combat sim, more than a first person shooter and more than an MMO: Star Citizen is the First Person Universe that will allow for unlimited gameplay.</p>
+          <a href="https://robertsspaceindustries.com/about-the-game/spaceflight">Learn more here</a>
+        </div>
+        <div class="col-md-6">
+          <h3>What is The Dream Sanctuary (TDS)?</h3>
+          <p>The Dream Sanctuary is a gaming community not affiliated with Star Citizen that some of our members are apart of.</p>
+          <p>They have an unlimited slot voice comm. server we can use and lots of active players already there!</p>
+        </div>
+      </div>
+      <div class="col-md-12 extra-space">
+        <a class="btn btn-danger" target="_blank" href="https://robertsspaceindustries.com/orgs/MUSKETEERS">Enlist on RSI</a>
+      </div>
+      <div class="col-md-12 extra-space">
+        Copyright &copy; 2015 &middot; All Rights Reserved &middot; Joe Kent
+        <iframe src="https://ghbtns.com/github-btn.html?user=deadlybutter&repo=musketeers&type=fork&count=false" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      </p>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
